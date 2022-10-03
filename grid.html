@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+
+    <style>
+          #grid{
+            border:5px solid pink;
+            display:grid;
+            grid-template-columns:150px 1fr;
+        }
+
+        div{
+            border:5px solid gray;
+        }
+
+        #grid2{
+            display:grid;
+            grid-template-columns:150px 1fr;
+            /* 150px,1fr하면 다르게 뜨는데 왤까 */
+        }
+        #grid2 ol{
+            padding-left:30px;
+        }
+
+        #grid2 #article{
+            border-top: 1px;
+            border-bottom: 1px;
+            padding-left:15px;
+            
+        }
+
+        @media(max-width:500px){
+            #grid2{
+            display:block;
+
+        }
+        #article{
+            border:none;
+        }
+
+        }
+
+        
+
+      
+    </style>
+</head>
+<body>
+
+    <div id="grid">
+        <!-- div나 span은 단락자체에 의미는 없으나 css입히고 싶을때 -->
+        <div>NAVIGATION</div>
+        <div>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+            
+        </div>
+    </div>
+    <!-- can i use? 사이트 가 css가 사용할수 있는지 없는지 알려줌 -->
+    <div id="grid2">
+        <ol>
+            <li>hi</li>
+            <li>ho</li>
+            <li>he</li>
+        </ol>
+         <div id="article">
+            <h2>css</h2>
+            <p>One of the most important thing in the world is that we have to use it for our lives
+                Ohbom is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+            </p>
+         </div>
+    </div>
+    <script></script>
+</body>
+</html>

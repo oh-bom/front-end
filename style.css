@@ -1,0 +1,39 @@
+
+#grid{
+  border:5px solid pink;
+  display:grid;
+  grid-template-columns:150px 1fr;
+}
+
+div{
+  border:5px solid gray;
+
+
+}
+
+#grid2{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  /* 150px,1fr하면 다르게 뜨는데 왤까 */
+}
+#grid2 ol{
+  padding-left:30px;
+}
+
+#grid2 #article{
+  border-top: 1px;
+  border-bottom: 1px;
+  padding-left:15px;
+  
+}
+
+@media(max-width:500px){
+  #grid2{
+  display:block;
+
+}
+#article{
+  border:none;
+}
+
+}

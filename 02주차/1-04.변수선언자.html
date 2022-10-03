@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var 선언자
+        var x=5;
+        var y=3;
+        var z=x+y;
+
+        console("x, y, z",x,y,z);
+
+        var x=7;//재선언이 동일한 변수명으로 가능
+        z=x+y;
+        console.log("x,y,z",x,y,z);
+
+        //let 선언자
+        let x1=5;
+        let y1=6;
+        let z1=x1+y1;
+
+       // let x1=7;//let은 재선언은 안됨
+        x1=7;//재할당은 가능. 
+        //위에 var로 x선언한걸 까먹고 또 재선언해버릴수도있자나,,에서 도입
+         
+        //cont 상수
+        const PI=3.14;
+
+    </script>
+</body>
+</html>

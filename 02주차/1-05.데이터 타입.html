@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //문자열 String
+        let name="ohbom";
+        let name2='lala';
+
+        let doubleQuote='She is called "ohbom"';//""를 출력할 문자열안에 쓰고싶을때
+        
+        let doubleQuote2="She is called \"ohbom2\"";//""를 출력할 문자열안에 쓰고싶을때
+      
+        
+        console.log(doubleQuote);
+        console.log(doubleQuote2);
+
+        //숫자 number
+        let x=3;
+        let y=3.14;
+
+        //undefined
+        let u;
+        console.log(u);
+        
+        //null (undefined랑 다름)
+        let n=null;
+        console.log(n);
+
+        //object 타입
+        
+        //ver1
+        let person={};
+        person.firstName="bom";
+        person.lastName="oh";
+        person.age=23;
+
+        //ver3 위와 동일
+        // erson["firstName"]="bom";
+        // person["lastName"]="oh";
+        // person["age"]=22;
+ 
+        //ver2
+        let person2={
+            firstName:"hyewon",
+            lastName:"lim",
+            age:22,
+            person1:person//object안에 또 object넣을수있다
+        };
+
+        person2.email="xxx@gmail.com";
+
+        //배열-array
+        let arr1=["iu","bts","why don't we"];
+        console.log(arr1[0]);
+
+        let arr2=[3,1,2,4];
+        console.log(arr2[2]);
+
+        let arr3=["ohbom",23,undefined];//배열안에 여러개의 데이터 타입 담을수있음
+        let arr4=[person,person2];//object도 담을 수 있음
+
+        //boolean
+        let isAdult=true;
+
+        console.log(typeof name);
+        console.log(typeof arr1);//! !array의 type은 object!로 나옴(착각 no)
+
+    
+
+
+
+
+
+    </script>
+</body>
+</html>

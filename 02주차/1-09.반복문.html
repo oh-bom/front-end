@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var d=new Date();
+        var day=d.getDay();
+
+        console.log(day);
+
+
+        let numbers=[1,2,3,4,22];
+        //for-in( index 읽기)
+        for(var i in numbers){
+            console.log(numbers[i]);
+        }
+
+        person={
+            firstNmae:"oh",
+            lastName:"bom",
+            age:22
+        }
+
+        for(var key in person){
+            console.log(person[key]);
+        }
+        /*
+        앞에서 선언할때 person.firstNmae=이 방식으로 했다면 person.key로 배열을
+        돌려야하는데 그게 불가능 . 왜냐면 그러면 person에 key라는 값이 있다는게 되니까!
+        그래서 for문 돌리려면 person["firstName"] 이런식으로 추가했어야함.
+
+
+        */
+
+        //for-of(아예 값을 읽는거)
+        for(var num of numbers){
+            console.log("\n");
+            console.log(num);
+        }
+
+    </script>
+</body>
+</html>

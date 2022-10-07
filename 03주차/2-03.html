@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=true;
+        var y=new Boolean(true);
+
+        console.log(typeof x);//boolean
+        console.log(typeof y);//object
+
+        console.log(Boolean(10>9));//object
+        console.log(10>9);//boolean
+
+        var x=0;
+        console.log(x);
+        console.log(Boolean(x));//false 출력
+
+        var x="";
+        console.log(Boolean(x));//false 출력(1이 아니니까)
+
+
+
+
+    </script>
+</body>
+</html>

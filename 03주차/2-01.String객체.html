@@ -13,44 +13,52 @@
 
         //찾지 못할때는 -1값을 리턴
         //이런식으로 응용
-        if(str.indexOf("")>-1){
+        // if(str.indexOf("")>-1){
 
-        }
+        // }
 
         //lastIndexOf
         
         //serach
         let str="Please locate where 'locate'";
+        console.log("\n\n");
         console.log(str.search("locate"));
 
         //slice
         var str2="apple, banana, kiwi";
         console.log(str2.slice(7,13));//7에서 12까지 빼오는거임(13전에 자른다)
-        console.log(str.slice(7));//7부터 끝까지
+        console.log(str2.slice(7));//7부터 끝까지
 
-        console.log(str2.(-12,-6))//맨 뒤부터 시작
-        cosnsole.log(str.slice(-1));//-1에서 0까지
+        console.log(str2.slice(-12,-6));//맨 뒤부터 시작
+        console.log(str2.slice(-1));//-1에서 0까지
         
         //substring
         console.log(str.substring(7,13));//slice(7,13)과 동일
 
         //substr
-        console.log(str.substr(7,3));//7부터 글자 3개 읽어서 출력
+        console.log(str2.substr(7,3));//7부터 글자 3개 읽어서 출력
 
         var birthday="000721";
         console.log(birthday.substr(0,2));//년도만 알고싶어
         console.log(birthday.substr(2,2));//월만 알고싶어
 
         let birthday2="2000-07-21";
-        console.log(birthday.subString(0,birthday.indexOf("-")));
+        console.log(birthday2.substring(0,birthday2.indexOf("-")));
 
         //replace
         var str3="please visit there there there";
         var str4=str3.replace("there","hei");//처음꺼만 변경
+        console.log(str4);
 
-        var str5=str3.replace(/here/gi,"there");//모든 here를 there로 바꾼다.
+        var str5=str3.replace(/there/gi,"wow");//모든 here를 there로 바꾼다.
         //g는 글로벌, i는 대소문자 구분안한다는거
-        console.log(str3);
+        console.log(str5);
+
+        var str7="This song is made for you";
+        var str9=str7.replace("you","me");
+        var str8=str7.replace(/this/gi,"my");
+        console.log(str9);
+        console.log(str8);
 
         //toUpperCase(), toLowerCase()
         console.log(str.toUpperCase());
@@ -82,6 +90,10 @@
         var tags="키보드, 기계식, 블루투스";
         console.log(tags.split(","));//split할 기준을 parameter로
         //tags하는 순간 배열로 변해요
+
+        console.log(typeof(tags));
+        var t=tags.split(",");
+        console.log(typeof(t));
 
         var arr3=birthday.split("-");
         

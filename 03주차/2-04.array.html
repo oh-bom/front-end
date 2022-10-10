@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Document</title>
+    <meta charset="utf-8">
 </head>
 <body>
     <div id="div1"></div>
@@ -33,12 +34,20 @@
  
         //shift() 배열의 첫번째 element 제거 후 리턴
 
+        console.log("\n");
         var str=fruits.shift();
         console.log(str);
+        console.log(fruits);
+        console.log("\n");
+        
 
         //unshift() 배열의 첫번째에 새 element 추가
         fruits.unshift("lemon");
         console.log(fruits);
+
+        let seasons=["spring","summer","autumn","winter"];
+        seasons.splice(1,2,"봄과 겨울 사이");
+        console.log(seasons);
 
         //splice(a,b)
         /*
@@ -57,11 +66,14 @@
         
         //slice()
         console.log(season);
-        var season2=season.slice(1,2);
+        var season2=season.slice(1,3);
         console.log(season2);
 
         //!sort()
         console.log(fruits.sort());//abc 순으로 정렬
+
+        var arr=["vienna","budapest","seoul","praha"];
+        console.log(arr.sort());
 
         var points=[4,2,33,9,10];
         console.log(points.sort());//이대로 하면 그냥 맨앞문자를 오름차순으로
@@ -100,6 +112,12 @@
              
 
         });
+        console.log("\nhehehe");
+
+
+        console.log(persons.sort());
+
+        console.log("\nhehehe");
 
         console.log(persons);
 
@@ -112,7 +130,7 @@
         var pass=persons.filter(function(person){
             return person.point>80;
         });
-        
+        console.log("pass: ");
         console.log(pass);
 
         var seoul=persons.filter(function(person){
@@ -129,17 +147,20 @@
         arr(전체 배열)
         //
         */
-        var total=0;
+        var total=10;
 
-        var arr1=[1,2,3,4];
+        var arr1=[1,2,3,4,5];
         // for(var x of arr1){
         //     total+=x;
         // }
 
-        var total=arr1.reduce(function(a,c){
-            return a+c;
+        var total=arr1.reduce(function(accumulator,current,index){
+            console.log(accumulator+","+current+","+index);
+            return accumulator+current;
 
         });
+
+        console.log(total);
 
         //map 새로운 배열을 만들어준당
         var userList=[
@@ -149,7 +170,7 @@
         ];
 
         var userList2=userList.map(function(user){
-            return {fullName:user.lastName+user.firstName, lastName:user.lastName};
+            return {fullName:user.lastName+user.firstName, email:user.email};
 
         });
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+</head>
+<body>
+    <script>
+
+        //
+        var d=new Date();//현재 날짜 및 시간
+        console.log(d);
+        
+        
+        console.log("timezone",d.getTimezoneOffset());//분단위
+        //-540분=-9h(우리나라 기준)
+
+
+        
+        //month만 0부터 시작, day는 1부터 시작
+        //그래서 7로 입력하면 august 나옴,,
+       
+        // 월을 배열에 넣을때 그러면 매번 -1을 해줘야하니까
+        // 그걸 방지하려고,,?라는 추측,,
+
+        var year=d.getFullYear();
+
+        var month=d.getMonth();
+        console.log("month: ",month);
+
+        console.log(d.getDay());
+        //일-0, 월-1
+
+        var hour=d.getHours();
+        var minute=d.getMinutes();
+        var second=d.getSeconds();
+
+        console.log(utcYear=d.getUTCHours());
+
+        //Time Zone
+
+        //moment.js 사용(moment.js.cdn 검색 후 링크 head에 올리기)
+
+       console.log(moment().format("YYYY-MM-DD"));
+       console.log(moment().subtract(7,"days").format("YY-MM-DD"));
+       console.log(moment().add(7,"days").format("YY-MM-DD HH"));
+
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

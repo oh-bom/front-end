@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" />
+    <button type="button">save</button>
+
+
+
+    <script>
+        //console.log(window);
+        
+        alert("this is alert");
+
+      //  var yn=confirm("정말 삭제 하시겠어여?");
+        //console.log(yn);
+
+        //if(yn)
+
+        if(confirm("really delete?")){
+            console.log("delete confirm");
+        }
+
+        console.log(prompt("insert your passcode"));
+
+        window.open("https://google.com");
+       // window.print();
+
+        //setTimeout
+        setTimeout(function(){
+            console.log("5초후 프로그램 실행");
+            
+
+        },1000*5);
+        //밀리 세컨드가 기준이라 1000이 1초 의미함
+
+        //setInterval
+        var i=0;
+        var fnc=setInterval(function(){
+            console.log("3초마다 프로그램 실행"+i);
+            
+            if(i==3){
+                clearInterval(fnc);
+            }
+            i++
+
+
+
+        },3000);
+
+        //clearInterval
+
+
+
+
+
+    </script>
+</body>
+</html>

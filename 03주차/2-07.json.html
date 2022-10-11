@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //json-JavaScript Object Notation
+        /*
+        json서버로부터 웹페이지로 데이터 전송시 사용
+        웹페이지에서 서버로 데이터 전송시에도 사용
+        */
+
+        var data={
+            "employees":[
+                //json에선 key도 ""로 해줘야함(그냥 object할때는 firstName만 해도 됬음)
+                {"firstName":"oh","lastName":"bom"},
+                {"firstName":"oh2","lastName":"bom2"},
+                
+            ]
+        }
+
+        //data.employees[0].firstName;//oh
+
+        //JSON.stringfy : data를 string으로 바꿀수 있다.
+     //console.log(data);
+        console.log(JSON.stringify(data));
+
+        //JSON.parse : object로 만들수 있다.
+
+        var text='{"employees":['+
+        '{"firstName":"oh","lastName":"bom"},'
+        +'{"firstName":"oh2","lastName":"bom2"}]}';
+
+        var obj=JSON.parse(text);
+        console.log("\n",obj);
+
+    </script>
+</body>
+</html>

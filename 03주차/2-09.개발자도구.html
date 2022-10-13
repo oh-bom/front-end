@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("hello");
+        console.info("2");
+        console.warn("3");
+        console.error("4");
+
+
+        var userList=[ 
+            {first:1,second:2},
+            {first:11,second:22}
+        ];
+        console.table(userList);
+
+        function a(){
+            console.time();
+            //code
+            console.timeEnd();
+
+        }
+
+        //잘 안쓴다용
+        console.log("this is %cstyle message","color:yellow");
+    </script>
+</body>
+</html>

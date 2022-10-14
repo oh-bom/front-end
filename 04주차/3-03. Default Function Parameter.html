@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        say("hi~");
+        say();//undefined출력
+
+        //ES6-EcmaScript 6
+
+        //default function parameter
+        function say(message="parameter가 넘어오지 않음"){
+            console.log(message);
+        }
+
+        function plus(x,y=1){
+            console.log(x+y);
+        }
+
+        plus(4);
+
+
+      
+
+    </script>
+</body>
+</html>

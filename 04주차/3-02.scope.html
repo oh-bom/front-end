@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //scope는 변수에 대한 접근성을 의미
+
+
+        //local scope
+        function myFunction(){
+            var carName="hyundai"; //local scope
+        }
+
+
+        myFunction2();
+        //이거 앞에다가 놔도 에러안남,,왜?
+        //js는 function이 밑에있더라도 먼저 해석후 그다음에 실행
+
+        //global scope
+        var carName2="kia";
+        
+        function myFunction2(){
+            console.log(carName2);
+        }
+
+        //function 명 지정안해도됨 이렇게 변수안에 바로 함수 담을때는
+        //얘처럼 변수안에 함수담는건 myfunction3을 위에 놓으면 에러, 호출이 먼저안됨여긴..
+        var myFunction3=function(){
+            console.log("hahaha");
+        }
+
+        myFunction3(); 
+
+        
+    
+    </script>
+</body>
+</html>

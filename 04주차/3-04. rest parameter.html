@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(...args){
+           var total=0;
+        //    for(var x of args){
+        //     total+=x;
+        // }
+
+        //forEach
+        args.forEach(function(x,index){
+            console.log(index);
+            total+=x;
+
+        });
+
+          console.log(total);
+          return total;
+        }
+
+
+
+        sum(5,7,13,7,21);//입력한 숫자의 개수만큼 배열로 바뀌어서 받게됨
+
+
+
+    </script>
+</body>
+</html>

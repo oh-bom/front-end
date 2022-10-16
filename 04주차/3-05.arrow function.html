@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hello(){
+            console.log("hi");
+            return "hello";
+        }
+
+        var hello=function(){
+            console.log("hello world!");
+            return "hello world~~!";
+        
+        }
+
+        var hello=()=>{
+            console.log("hello world!");
+            return "hello world~~!";
+
+        }
+
+        var hello=()=>"espanola~";
+
+        var hello=(firstName,lastName)=>"hello " +firstName+lastName;
+
+        console.log(hello("oh","bom"));
+
+
+        //parameter 1개일땐 ()조차 생략가능
+        var intro= fullName=>"nice to meet you "+fullName;
+        console.log(intro("bombom"));
+
+        var myhello=(age,name)=>{
+            return age+" and "+ name;
+        }
+
+        var intro=name=>name+"is mine";
+
+        console.log(intro("111"));
+
+        var first=(numbers)=>numbers;
+        var ss=ai=>{
+            
+        }
+
+
+        
+    </script>
+</body>
+</html>

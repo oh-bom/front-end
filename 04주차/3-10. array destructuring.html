@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function getScores(){
+            return [70,80,90];
+        }
+
+        var scores=getScores();
+        //console.log(scores[0]);
+
+        //array desturturing
+        var [x,y]=getScores();
+        console.log(x);
+
+        //! 실무에서 
+
+        //위도, 경도 latitude, longitude
+        function getLocation(){
+            return [127.22,721.01];
+        }
+
+        var [latitude,longitude]=getLocation();
+        console.log(longitude);
+
+
+    </script>
+</body>
+</html>

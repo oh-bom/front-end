@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function getPerson(){
+            return {
+                firstName:"john",
+                lastName:"doe",
+                age:23,
+                email:"wowthing@gmail.com",
+                country:"USA"
+            };
+
+        }
+
+        var person=getPerson();
+        console.log(person);
+
+        //실무에서 많이 쓰인다.
+        var{firstName,lastName}=getPerson();
+        console.log(firstName);
+        console.log(lastName);
+
+        var{firstName,age}=getPerson();
+        console.log(age);
+
+
+
+    </script>
+</body>
+</html>

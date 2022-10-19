@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script src="./3-13.module.js" type="module">
+        log(PI);
+        log("log message printing");
+        error("error");
+    </script>
+    
+   
+     <!-- 이렇게하면 내가 script에 적은 모든 함수나 변수가 다 import됨 --> 
+
+     <!-- 이건 꼭 필요
+      -->
+
+      <script type="module">
+        import {log,PI} from "./3-13.module.js";
+        
+        //module로 import할때는 저 함수들이나 변수들중에 내가 직접 입력하고 import
+        //한 애들만 import
+        //module이 필요한 예시상황
+        // 우리팀이 만든 함수를 가져와서 쓰는데 난 거기서 한두개만쓸거야
+        // 근데 그걸위해 다 import는 좀,,
+        // 그리고 그 위에 정의된걸 다 모르니까 내가 같은 변수명으로 또
+        // 선언해버려서 꼬일수도있자나
+
+        log(PI);
+        log("log로 메시지 출력");
+       // error("error로 메시지 출력");
+  
+     </script>
+
+
+     <script src="./3-13.ref.js" type="module"></script>
+
+</body>
+</html>

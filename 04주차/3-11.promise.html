@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script>
+        //promise
+
+        var url=
+        "https://08fe256f-b1a1-470a-a1d3-0e22ec9aa918.mock.pstmn.io/userList";
+        
+        //"https://08fe256f-b1a1-470a-a1d3-0e22ec9aa918.mock.pstmn.io/productlist";
+
+        // var data=axios.get(url).then(function(response){
+        //     console.log(response.data);
+        //     return response.data;
+        // });
+
+        //promise
+        function getData(){
+            
+            //resolve는 정상적으로 처리됬을때, reject는 뭔가 잘못되었을때
+            return new Promise(function(resolve,reject){
+                axios.get(url).then(function(response){
+                console.log(response.data);
+                resolve(response.data);
+
+            });
+        });
+        }
+
+        var total=0;
+       
+        //getData 호출 후 리턴값이 resolve로 오고난 후
+        getData().then(function(data){
+            //resolve로 넘겨준게 data로 들어옴
+            for(var item of data.userList){
+            //total+=item.price;
+            console.log(item.name);  
+        }
+
+        //    console.log(total);
+
+        });
+
+//        console.log(total); //error 뜬다....
+        //data is not iterable 
+        
+
+
+       // var x=1;
+
+        //서버 호출해서 데이터 받아오는 함수.
+        // y=callServerData();
+
+        //var z=x+y; 
+        //위와 같은 코드가 있다고 할때 y에 함수값받기전에 다음코드로 넘어가서
+        //y가 비었으니까 에러뜰수도 있다 이걸 방지하기 위해서 y값 받기전까지
+        //우리가 아직 진행안할게! -> prmoise
+
+        //axios
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

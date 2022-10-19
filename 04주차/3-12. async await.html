@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script>
+        var url=
+        "https://08fe256f-b1a1-470a-a1d3-0e22ec9aa918.mock.pstmn.io/productlist";
+
+        //!!async(비동기) awiat(기다려줄게!)!! 얘네는 한쌍이다..
+
+        async function getData2(){
+            return (await axios.get(url)).data;
+            //(await axios.get(url))을 받은 후 그거의 .data
+        }
+
+
+        //위의 url  모양을일반화된 모양
+        // async function getData2(path){
+        //     return (await axios.get(path)).data;
+        //  }
+
+
+
+        //
+        async function calculateSum(){
+            var data=await getData2();
+        
+        //이대로만 하면 error(await is only valid in async functions)
+        //그래서 위의 코드를 추가해 준다.
+
+            var total=0;
+  
+            for(var item of data.products){
+            total+=item.price;
+        }
+
+        console.log(total);
+
+        }
+       
+        calculateSum();
+
+        
+
+         
+    </script>
+</body>
+</html>

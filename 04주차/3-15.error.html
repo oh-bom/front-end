@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        try{
+            consoe.log("message from log");
+        }
+
+        catch(err){
+            console.log(err.name);
+            console.log(err.message);
+
+        }
+
+        console.log("log 정상 메시지");
+
+        var x=721;
+
+        try{
+            if(x=="") throw "empty";
+
+            var y=x+5;
+            console.log(y);
+            //만약 우리가 x에 숫자를 받아야하는데 저런거받아버리면?
+        }catch(err){
+            console.log(`x is ${err}`);
+        }finally{
+            console.log("try/catch문 마지막에 반드시 실행");
+
+        }//finally는 catch로 가던 안가던 무조건 실행
+    </script>
+</body>
+</html> 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        x=3.14;//var let선언 안함..f
+        console.log(x);//문법적으로 문제가 있는데,,출력은 됨
+        //초기엔 허용해 줬지만, strict mode하면 제대로 검사
+
+        //특정 함수 내에서만 쓰고싶으면 거기에만 넣어도됨
+        function myfunction(){
+            "use strict";
+            
+        }
+    </script>
+</body>
+</html>

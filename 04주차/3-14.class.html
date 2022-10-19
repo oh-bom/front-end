@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car{
+            constructor(modelName, modelYear, type, price){
+                this.modelName=modelName;//this는 이 class
+                this.modelYear=modelYear;
+                this.type=type;
+                this.price=price;
+
+            }
+
+            getModelName(){
+                return this.modelName;
+            }
+
+            getModelYear(){
+                return this.modelYear;
+            }
+
+            getPrice(){
+                return this.price;
+
+            }
+
+            setPrice(price){
+                this.price=price;
+            }
+
+        }
+
+        let car=new Car("ionic","2021","e",400);
+        console.log(car.getModelName());
+
+        //car.setPrice(4100);
+        console.log(car.getPrice());
+
+        
+        let car2=new Car("genesis","2021","e","7000");
+        car2.setPrice("7700");
+        console.log(car2.getPrice());
+
+
+        class ElectronicCar extends Car{
+            constructor(modelName,modelYear,price,chargeTime){
+                super(modelName,modelYear,"e",price);
+                this.chargeTime=chargeTime;
+            }
+
+            setChargeTime(time){
+                this.chargeTime=time;
+            }
+
+            getChargeTime(){
+                return this.chargeTime;
+            }
+
+        }
+        //setChargeTime 설정 방법1 (생성자에서 주기)
+        let eleCar1=new ElectronicCar("ionic5","2022","9000",60);
+
+        //setChargeTime 설정 방법 2
+        let eleCar2=new ElectronicCar("a","2222","33");
+        console.log(eleCar2.getChargeTime());
+       
+        eleCar2.setChargeTime(88);
+        console.log(eleCar2.getChargeTime());
+       
+        console.log(eleCar1.getModelName());
+        console.log(eleCar1.getChargeTime());
+        
+     
+    </script>
+</body>
+</html>

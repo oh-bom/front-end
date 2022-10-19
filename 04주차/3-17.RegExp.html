@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //정규식(Regular Expression)
+        var patt=/World/i; // '/ /'안이 검색할 내용, i가 modifier
+        //World=패턴, i-modifier
+
+        var str="hello WORLD";
+        console.log(str.search("world"));//-1 출력
+        console.log(str.search(/World/i));//i는 대소문자 상관없이 검색가능
+
+        var str2="hi world world"
+        console.log(str2.replace("WORLD","OHBOM"));
+
+        console.log(str2.replace(/world/i,"ohoh"));//처음 나온애만 바뀜
+
+        console.log(str2.replace(/world/g,"bombom")); //g는 다 바꾸기
+
+        //////////////////////
+        var str="Is this all there is";
+
+        var patt1=/[hat]/g; //[abc] a나 b나 c 있는 문자 다 찾기
+        var result=str.match(patt1);//배열로 리턴
+        console.log(result);//t h a t h 리턴
+
+        //[0-9]:0부터 9까지 모든 수 찾겠다
+        var str="123abc789wowthing";
+        var patt1=/[0-9]/g;
+
+        console.log(str.match(/[0-9]/g));
+
+        //(a|b) : a 또는 b (a or b)
+        //(red|green)
+
+        var str="red, green, blue, re,green,red,gree,yellow";
+        var patt=/(red|green)/g;
+        console.log(str.match(patt));
+
+        //\d 숫자 [0-9] 찾기
+        var str="give 721";
+        var patt=/\d/g;
+        console.log(str.match(patt));
+
+        // \s 공백 찾기
+
+        // \b 
+        var str="hi, look at me!";
+        var patt=/\blo/g; //시작이 LO인거 찾기
+        console.log(str.search(patt));
+
+        //n+ :n이 최소한 1개이상
+        var str="ohbom bom bom bo";
+        var patt=/bom+/g;
+        console.log(str.match(patt));
+
+        //n* : 0혹은 n개
+        var str="hellooo worllooooood";
+
+        var patt=/llo*/g; //l또는 o찾기 //o가 0개여도 상관없대니까 l도찾는겨
+        console.log(str.match(patt)); 
+
+        //n? 0개거나 1개
+        var str="1,100 or 5001000";
+        var patt=/10?/g;
+        console.log(str.match(patt));
+
+        //w3schools.com 정규식 참고
+
+
+        //실무 사용예시
+
+        //우편번호 5자리
+        //ex)32543이 모두 숫자임을 확인할때
+
+        var patt=/^\d{5}$/;//^는 반드시 뒤로 시작해라(숫자로 시작해라), $로 마치겠다.(숫자로 마치겟다 )
+        var postalCode="P01174";
+        console.log(patt.test(postalCode));//test는 정규식 내장함수라 정규식.test
+        console.log(patt.test("11123")+"gg");
+        
+
+        //전화번호
+        //010-1234-5678
+
+        var patt=/^(010)-\d{4}-\d{4}$/; //(010) 으로 시작-숫자 4자리-숫자4자리로끝난다
+        var tel="010-7125-9052";
+        console.log(patt.test(tel));
+
+        //이메일 주소
+        //wowthing.go@gmail.com
+        //hw.go@gmail.co.kr
+        var patt=/^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/; 
+        //w+는 하나이상의 문자열로 시작,(.은 특수문자 \.:일반문자)
+        //.일수도 \일수도 있으니까,,그다음은 다시 문자와야한다
+        //@와야됨 . 반드시 와야함 그다음 문자가 오는데 2개일수도 3개일수도,,(co.kr)
+
+        //국가별 은행계좌 패턴 check
+
+        console.log(patt.test("wowthing@gmail.com"));
+        console.log(patt.test("hw.go@gmail.co.kr"));
+
+        var num=[]
+
+    </script>
+</body>
+</html>

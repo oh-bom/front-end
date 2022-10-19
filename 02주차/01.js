@@ -1,0 +1,1 @@
+document.write("js파일 따로 위치<br>");

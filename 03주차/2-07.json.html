@@ -14,14 +14,14 @@
             "employees":[
                 //json에선 key도 ""로 해줘야함(그냥 object할때는 firstName만 해도 됬음)
                 {"firstName":"oh","lastName":"bom"},
-                {"firstName":"oh2","lastName":"bom2"},
+                {"firstName":"oh2","lastName":"bom2"}
                 
             ]
         }
 
         //data.employees[0].firstName;//oh
 
-        //JSON.stringfy : data를 string으로 바꿀수 있다.
+        //JSON.stringify : data를 string으로 바꿀수 있다.
      //console.log(data);
         console.log(JSON.stringify(data));
 
@@ -31,8 +31,11 @@
         '{"firstName":"oh","lastName":"bom"},'
         +'{"firstName":"oh2","lastName":"bom2"}]}';
 
-        var obj=JSON.parse(text);
-        console.log("\n",obj);
+        // var obj=JSON.parse(text);
+        // console.log("\n",obj);
+
+        console.log("last thing:");
+        console.log(JSON.parse(text));
 
     </script>
 </body>

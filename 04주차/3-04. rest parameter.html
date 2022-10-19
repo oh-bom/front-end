@@ -6,25 +6,50 @@
     <script>
         function sum(...args){
            var total=0;
-        //    for(var x of args){
-        //     total+=x;
-        // }
+           for(var x of args){
+            total+=x;
+        }
+        return total;
+    }
 
+    console.log(sum(1,3,5));
+
+
+        //sum(5,7,13,7,21);//입력한 숫자의 개수만큼 배열로 바뀌어서 받게됨
+
+        function sum2(...args){
         //forEach
+        let total=0;
         args.forEach(function(x,index){
             console.log(index);
             total+=x;
 
         });
+        return total;
+    }
 
-          console.log(total);
-          return total;
+    console.log(sum2(1,4,3));
+
+    function sum(...args){
+        let total=0;
+        for(var x of args){
+            total+=x;
         }
+        return total;
+    }
+
+    function sum2(...args){
+        var total=0;
+
+        args.forEach(function(x){
+            total+=x;
+        });
+        return total;
+    }
 
 
 
-        sum(5,7,13,7,21);//입력한 숫자의 개수만큼 배열로 바뀌어서 받게됨
-
+       
 
 
     </script>

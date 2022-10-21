@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    text: 
+    <br>
+    <input type="text" id="text1">
+
+    <label for="test">click here</label>
+    <input id="test" type="button">
+
+    <br> 관심사:
+    <br>
+
+    <label>
+        <input type="checkbox" name="chk_interest" value="ohbom">ohbom
+    </label>
+
+    <label>
+        <input type="checkbox" name="chk_interest" value="it">IT/컴퓨터
+    </label>
+
+    <label>
+        <input type="checkbox" name="chk_interest" value="entertainment">entertainment
+    </label>
+
+    <label>
+        <input type="checkbox" name="chk_interest" value="sports">sports
+    </label>
+
+    <label>
+        <input type="checkbox" name="chk_interest" value="shopping">shopping
+    </label>
+
+    <!-- 체크박스를 하나로 묶으려면 name 'chk_interet' 을 같은걸 이용하는거처럼 하나로 묶여야함 -->
+
+    <br> Radio:
+    <br>
+    <label>
+        <input type="radio" name="radio_email_yn" value="Y" checked>동의
+    </label>
+
+    <label>
+        <input type="radio" name="radio_email_yn" value="N" checked>거부
+    </label>
+
+    <br> Select:  
+    <br>
+
+   <select id="select1">
+        <option value="KO">Korea</option>
+        <option value="Wi">Wien</option>
+        <option value="Pr">Praha</option>
+
+    </select>
+
+    <div id="div1"> div이지롱</div>
+
+
+    <br>
+    <button type="button" onclick="doSave();">Save</button>
+    <button type="button">ohbom</button>
+
+    
+    <script>
+        document.getElementById("text1").value="first setting";
+
+        document.getElementById("text1").value="wow";
+
+        function doSave(){
+            console.log("doSave");
+
+            var oText1=document.getElementById("text1"); //하나만 가져옴
+            //id는 유일한 하나의 값이니까 element 하나만 가져옴
+
+            console.log(oText1.value);
+
+            //console.log(oText1);
+
+
+            var textValue=oText1.value;
+
+            console.log("index~");
+            var oText2=document.querySelector("#text1");
+            console.log(oText2);
+
+            console.log("index!");
+
+            console.log("ggg");
+            var oCheckbox=document.getElementsByName("chk_interest");
+            console.log(oCheckbox);
+            console.log("ggg");
+         
+            //Name은 같은거가 여러개일수도 있으니까 elements 인거임
+
+
+            //방법 1
+            //console.log(oCheckbox);
+
+            // for(var i=0;i<oCheckbox.length;i++){
+            //     if(oCheckbox[i].checked){
+            //         console.log(oCheckbox[i].value);
+            //     }
+            // }
+
+            //방법 2
+
+           var oCheckbox2=document.querySelectorAll("[name=chk_interest]:checked");
+           //selectorAll 은 배열형태로 리턴
+           console.log("just sleep,,");
+           console.log(oCheckbox2);
+
+           //selector는 하나의 객체만 리턴
+           var oRadio=document.querySelector("[name=radio_email_yn]:checked");
+           
+           console.log("@2");
+           console.log(oRadio);
+
+           var oSelect=document.getElementById("select1");
+           console.log(oSelect.value);
+
+           var oSelect=document.getElementById("select1");
+           console.log(document.getElementById("div1").innerText);
+
+           console.log(document.getElementsByTagName("div"));
+        }
+
+        doSave();
+
+    </script>
+</body>
+</html>

@@ -16,5 +16,12 @@ function solution2(phone_number){
 
 }
 
-console.log(solution("01071259052"));
-console.log(solution2("01071259052"));
+function solution_regExp(phone_number){
+    // var pat=/\d(?=\d{4})/g;
+    // console.log(pat.test(phone_number));
+    return phone_number.replace(/(?=\d{4})/g, "*");
+}
+
+// console.log(solution("01071259052"));
+// console.log(solution2("01071259052"));
+console.log(solution_regExp("01011119052"));
